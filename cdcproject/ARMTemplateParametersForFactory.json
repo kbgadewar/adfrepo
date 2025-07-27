@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "cdcproject"
+		},
+		"emp_dev_password": {
+			"value": ""
+		},
+		"empdetils_blob_xlsx_connectionString": {
+			"value": ""
+		},
+		"ls_blobstorage_connectionString": {
+			"value": ""
+		},
+		"properties_connectionString": {
+			"value": ""
+		},
+		"source_connectionString": {
+			"value": ""
+		},
+		"emp_dev_properties_typeProperties_server": {
+			"value": "cdcprojectvm.database.windows.net"
+		},
+		"emp_dev_properties_typeProperties_database": {
+			"value": "cdcdev"
+		},
+		"emp_dev_properties_typeProperties_userName": {
+			"value": "azadmin"
+		}
+	}
+}

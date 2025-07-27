@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "cdcproject"
+		},
+		"emp_dev_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'emp_dev'"
+		},
+		"empdetils_blob_xlsx_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'empdetils_blob_xlsx'"
+		},
+		"ls_blobstorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blobstorage'"
+		},
+		"properties_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'properties'"
+		},
+		"source_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'source'"
+		},
+		"emp_dev_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "cdcprojectvm.database.windows.net"
+		},
+		"emp_dev_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "cdcdev"
+		},
+		"emp_dev_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azadmin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "cdcproject_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"emp_dev_password": {
+						"value": "[parameters('emp_dev_password')]"
+					},
+					"empdetils_blob_xlsx_connectionString": {
+						"value": "[parameters('empdetils_blob_xlsx_connectionString')]"
+					},
+					"ls_blobstorage_connectionString": {
+						"value": "[parameters('ls_blobstorage_connectionString')]"
+					},
+					"properties_connectionString": {
+						"value": "[parameters('properties_connectionString')]"
+					},
+					"source_connectionString": {
+						"value": "[parameters('source_connectionString')]"
+					},
+					"emp_dev_properties_typeProperties_server": {
+						"value": "[parameters('emp_dev_properties_typeProperties_server')]"
+					},
+					"emp_dev_properties_typeProperties_database": {
+						"value": "[parameters('emp_dev_properties_typeProperties_database')]"
+					},
+					"emp_dev_properties_typeProperties_userName": {
+						"value": "[parameters('emp_dev_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

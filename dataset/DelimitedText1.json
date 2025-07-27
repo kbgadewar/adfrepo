@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "AdventureWorks_Customers.csv",
 				"container": "cdcempdetails"
 			},
 			"columnDelimiter": ",",

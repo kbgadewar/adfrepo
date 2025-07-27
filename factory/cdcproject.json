@@ -1,0 +1,9 @@
+{
+	"name": "cdcproject",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "146bb418-6395-4e49-bd67-f4d11bc9ea82",
+		"tenantId": "057cec0c-bcad-4c4b-bc15-a3ff865c6ca0"
+	}
+}

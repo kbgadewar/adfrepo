@@ -1,0 +1,17 @@
+{
+	"name": "emp_dev",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "cdcprojectvm.database.windows.net",
+			"database": "cdcdev",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "azadmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEVDMTZDNUM2LUMwQjItNDY1RC1BMjBCLUU0MkIwNTlFMDYxN19jYzlkZjdlNi05NmM2LTRkNjQtOWRiYi1iNjgxMTBjZjdkNzUiDQp9"
+		}
+	}
+}

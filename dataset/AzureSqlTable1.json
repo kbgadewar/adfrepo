@@ -1,0 +1,69 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "emp_dev",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CustomerKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Prefix",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FirstName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LastName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BirthDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MaritalStatus",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EmailAddress",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AnnualIncome",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TotalChildren",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EducationLevel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Occupation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HomeOwner",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp_details"
+		}
+	}
+}
